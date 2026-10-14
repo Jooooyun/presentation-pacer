@@ -1,5 +1,5 @@
 const http=require('node:http'),fs=require('node:fs'),path=require('node:path'),{spawn}=require('node:child_process'),readline=require('node:readline');
-const PORT=43128,HOST='127.0.0.1',origin=`http://${HOST}:${PORT}`;
+const PORT=43129,HOST='127.0.0.1',origin=`http://${HOST}:${PORT}`;
 const candidates=[path.join(process.env.APPDATA||'','npm/node_modules/@openai/codex/node_modules/@openai/codex-win32-x64/vendor/x86_64-pc-windows-msvc/bin/codex.exe')];
 const exe=candidates.find(p=>fs.existsSync(p));
 let child,seq=0,threadId,pending=new Map(),remote,clients=new Set(),lastPulse=Date.now(),idleSince=Date.now();
