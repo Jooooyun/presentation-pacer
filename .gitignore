@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+*.wav
+*.mp3
+*.mp4
+recordings/
+private/
+.DS_Store
+Thumbs.db
